@@ -1,0 +1,28 @@
+[package]
+name = "bcrypt-pbkdf"
+version = "0.0.1"
+authors = ["brycx <brycx@protonmail.com>"]
+description = "bcrypt_pbkdf implementation in pure Rust."
+keywords = [ "cryptography", "bcrypt", "pbkdf", "bcrypt-pbkdf" ]
+categories = [ "cryptography", "no-std" ]
+readme = "README.md"
+repository = "https://github.com/brycx/bcrypt-pbkdf"
+documentation = "https://docs.rs/bcrypt-pbkdf"
+license = "MIT"
+exclude = [
+    ".gitignore",
+    ".travis.yml",
+    "fuzz/*"
+]
+
+[dependencies]
+blowfish = { version = "0.3.0", features = ["bcrypt"] }
+byteorder = "1.2.4"
+seckey = "0.9.1"
+sha2 = "0.7.1"
+
+[badges]
+travis-ci = { repository = "brycx/bcrypt-pbkdf" }
+
+[profile.release]
+opt-level = 3
