@@ -1,6 +1,6 @@
 [package]
 name = "bcrypt-pbkdf"
-version = "0.0.1"
+version = "0.0.2"
 authors = ["brycx <brycx@protonmail.com>"]
 description = "bcrypt_pbkdf implementation in pure Rust."
 keywords = [ "cryptography", "bcrypt", "pbkdf", "bcrypt-pbkdf" ]
