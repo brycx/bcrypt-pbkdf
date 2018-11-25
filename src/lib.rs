@@ -29,7 +29,7 @@
 //! - If `hash_out` length is greater than 1024
 //! - If zero rounds are selected
 //!
-//! # Secrity:
+//! # Security:
 //! It is strongly recommnded to use a salt generated with a CSPRNG and select a number of rounds
 //! that is greater than 50.
 
