@@ -5,9 +5,13 @@ A pure Rust implementation of the `bcrypt_pbkdf` password hashing algorithm.
 It is mostly based on the work done in [rust-crypto](https://docs.rs/rust-crypto/0.2.36/crypto/bcrypt_pbkdf/fn.bcrypt_pbkdf.html).
 As such, this library is tested with all test vectors provided in [rust-crypto](https://github.com/DaGenix/rust-crypto/blob/master/src/bcrypt_pbkdf.rs).
 
+### Rust nightly
+`bcrypt_pbkdf` requires Rust nightly.
+
 ### Security
 This library has at no point received any formal cryptographic/security audit. It
-should be used at own risk.
+should be **used at own risk**.
+
 
 ### Example
 ```rust

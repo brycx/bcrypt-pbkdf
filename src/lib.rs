@@ -39,11 +39,11 @@ extern crate std;
 mod bcrypt_hash;
 extern crate blowfish;
 extern crate byteorder;
-extern crate seckey;
+extern crate clear_on_drop;
 extern crate sha2;
 
 use byteorder::{BigEndian, ByteOrder};
-use seckey::zero;
+use clear_on_drop::clear::Clear;
 use sha2::{Digest, Sha512};
 use bcrypt_hash::bcrypt_hash;
 
@@ -97,11 +97,11 @@ pub fn bcrypt_pbkdf(password: &[u8], salt: &[u8], rounds: usize, hash_out: &mut 
             }
         }
 
-        zero(&mut step);
-        zero(&mut bcrypt_hash_out);
+        step.clear();
+        bcrypt_hash_out.clear();
     }
 
-    zero(&mut hashed_password);
+    hashed_password.clear();
 }
 
 #[test]

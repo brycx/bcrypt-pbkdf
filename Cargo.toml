@@ -1,6 +1,6 @@
 [package]
 name = "bcrypt-pbkdf"
-version = "0.0.2"
+version = "0.0.3"
 authors = ["brycx <brycx@protonmail.com>"]
 description = "bcrypt_pbkdf implementation in pure Rust."
 keywords = [ "cryptography", "bcrypt", "pbkdf", "bcrypt-pbkdf" ]
@@ -17,9 +17,12 @@ exclude = [
 
 [dependencies]
 blowfish = { version = "0.3.0", features = ["bcrypt"] }
-byteorder = { version = "1.2.6", default-features = false }
-seckey = { version = "0.9.1", default-features = false }
-sha2 = "0.7.1"
+byteorder = { version = "1.2.7", default-features = false }
+sha2 = { version = "0.8.0", default-features = false }
+
+[dependencies.clear_on_drop]
+version = "0.2.3"
+features = ["nightly"]
 
 [badges]
 travis-ci = { repository = "brycx/bcrypt-pbkdf" }

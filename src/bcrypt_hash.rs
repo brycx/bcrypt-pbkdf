@@ -22,7 +22,7 @@
 
 use blowfish::Blowfish;
 use byteorder::{BigEndian, ByteOrder, LittleEndian};
-use seckey::zero;
+use clear_on_drop::clear::Clear;
 
 const MAGIC_STRING: &str = "OxychromaticBlowfishSwatDynamite";
 
@@ -52,7 +52,7 @@ pub fn bcrypt_hash(hashed_password: &[u8], hashed_salt: &[u8], dst: &mut [u8]) {
         LittleEndian::write_u32(&mut dst[i * 4..(i + 1) * 4], buf[i]);
     }
 
-    zero(&mut buf);
+    buf.clear();
 }
 
 #[test]

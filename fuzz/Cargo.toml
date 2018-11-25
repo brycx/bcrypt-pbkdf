@@ -6,7 +6,7 @@ authors = ["Automatically generated"]
 publish = false
 
 [dependencies]
-rust-crypto = "*"
+rust-crypto = "0.2.36"
 
 [package.metadata]
 cargo-fuzz = true
